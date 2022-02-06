@@ -1,0 +1,43 @@
+.locationBox .location {
+  color: #fff;
+  font-size: 40px;
+  font-weight: 500;
+  text-align: center;
+  text-shadow: 3px 3px rgba(50, 50, 50, 0.9);
+}
+
+.locationBox .date {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 300;
+  text-align: center;
+  font-style: italic;
+  text-shadow: 1px 1px rgba(50, 50, 50, 0.9);
+}
+
+.weatherBox {
+  text-align: center;
+}
+
+.weatherBox .temp {
+  position: relative;
+  display: inline-block;
+  margin: 30px auto;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 16px;
+
+  padding: 15px 25px;
+  color: #fff;
+  font-size: 50px;
+  font-weight: 900;
+  text-shadow: 1px 1px rgba(50, 50, 50, 0.9);
+  text-align: center;
+  box-shadow: 3px 6px rgba(255, 255, 255, 0.5);
+}
+
+.weatherBox .weather {
+  color: #fff;
+  font-size: 48px;
+  font-weight: 600;
+  text-shadow: 1px 1px rgba(50, 50, 50, 0.9);
+}

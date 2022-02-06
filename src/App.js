@@ -1,5 +1,4 @@
 import Input from "./components/Input";
-import Cards from "./components/Cards";
 import { Container, Row, Col } from "react-bootstrap";
 import { useState, useEffect } from "react";
 import axios from "axios";
