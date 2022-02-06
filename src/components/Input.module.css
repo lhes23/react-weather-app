@@ -1,9 +1,8 @@
 .inputForm {
-  padding-top: 50px;
   margin: auto;
+  text-align: center;
+  padding: 50px;
 }
-
-.inputForm {
-  margin: auto;
+.inputGroup {
   text-align: center;
 }

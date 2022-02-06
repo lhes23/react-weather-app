@@ -4,20 +4,22 @@ import styles from "./Input.module.css";
 
 const Input = (props) => {
   return (
-    <InputGroup className={styles.inputForm}>
+    <InputGroup className={styles.inputGroup}>
       <Form onSubmit={props.onSubmitFormHandler} className={styles.inputForm}>
-        <Form.Group className="mb-3" controlId="formBasicEmail">
-          <Form.Control
-            type="text"
-            placeholder="Enter City"
-            onChange={(e) => {
-              props.setCity(e.target.value);
-            }}
-          />
-        </Form.Group>
-        <Button variant="primary" type="submit">
-          Submit
-        </Button>
+        <div className="d-grid gap-3">
+          <Form.Group>
+            <Form.Control
+              type="text"
+              placeholder="Enter City"
+              onChange={(e) => {
+                props.setCity(e.target.value);
+              }}
+            />
+          </Form.Group>
+          <Button variant="primary" size="lg" type="submit">
+            Submit
+          </Button>
+        </div>
       </Form>
     </InputGroup>
   );

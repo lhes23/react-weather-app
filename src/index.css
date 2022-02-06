@@ -3,15 +3,3 @@
   padding: 0;
   box-sizing: border-box;
 }
-.bg-image {
-  background-image: url("./assets/cold.jpg");
-  background-size: cover;
-}
-
-.bg-image-warm {
-  background-image: url("./assets/warm.jpg");
-}
-
-.container {
-  min-height: 100vh;
-}
