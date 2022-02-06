@@ -1,11 +1,13 @@
-.container {
+.container-fluid {
   height: 100vh;
 }
 
 .cold {
   background: url("./assets/cold.jpg");
+  background-size: cover;
 }
 
 .warm {
   background: url("./assets/warm.jpg");
+  background-size: cover;
 }

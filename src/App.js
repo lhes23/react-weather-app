@@ -27,6 +27,7 @@ function App() {
 
   return (
     <Container
+      fluid
       className={cityDetails && cityDetails.main.temp >= 28 ? "warm" : "cold"}
     >
       <Row>
