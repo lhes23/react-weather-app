@@ -3,7 +3,7 @@ import Cards from "./components/Cards";
 import { Container, Row, Col } from "react-bootstrap";
 import { useState, useEffect } from "react";
 import axios from "axios";
-import DateBuilder from "./components/DateBuilder";
+import ResultBox from "./components/ResultBox";
 
 const api = {
   id: "524901",
@@ -38,24 +38,7 @@ function App() {
               setCity={setCity}
               onSubmitFormHandler={onSubmitFormHandler}
             />
-            {cityDetails && (
-              <>
-                <div className="location-box">
-                  <div className="location">
-                    {cityDetails.name}, {cityDetails.sys.country}
-                  </div>
-                  <div className="date">
-                    {<DateBuilder newDate={new Date()} />}
-                  </div>
-                </div>
-                <div className="weather-box">
-                  <div className="temp">{cityDetails.main.temp} °C</div>
-                  <div className="weather">
-                    {cityDetails.weather[0].description}
-                  </div>
-                </div>
-              </>
-            )}
+            {cityDetails && <ResultBox cityDetails={cityDetails} />}
           </Cards>
         </Col>
       </Row>

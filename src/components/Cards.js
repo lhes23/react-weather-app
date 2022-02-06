@@ -1,11 +1,10 @@
 import React from "react";
 import { Card } from "react-bootstrap";
+import styles from "./Cards.module.css";
 
 const Cards = (props) => {
-  let temp = props.temp;
-
   let background = "cold";
-  if (temp >= 25) {
+  if (props.temp >= 25) {
     background = "warm";
   }
 
@@ -13,7 +12,7 @@ const Cards = (props) => {
     <Card>
       <Card.Header as="h5">{props.title}</Card.Header>
       <Card.Img src={require(`../assets/${background}.jpg`)} alt="Card image" />
-      <Card.ImgOverlay style={{ backgroundColor: "rgba(255,255,255,0.5)" }}>
+      <Card.ImgOverlay className={styles.imageOverlay}>
         <Card.Body>{props.children}</Card.Body>
       </Card.ImgOverlay>
     </Card>
