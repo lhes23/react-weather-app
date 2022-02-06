@@ -3,6 +3,7 @@ import { Container, Row, Col } from "react-bootstrap";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import ResultBox from "./components/ResultBox";
+import "./App.css";
 
 const api = {
   id: "524901",
@@ -28,7 +29,7 @@ function App() {
   return (
     <Container
       fluid
-      className={cityDetails && cityDetails.main.temp >= 28 ? "warm" : "cold"}
+      className={cityDetails && cityDetails.main.temp >= 25 ? "warm" : "cold"}
     >
       <Row>
         <Col>
