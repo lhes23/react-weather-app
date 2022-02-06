@@ -3,6 +3,7 @@ import Cards from "./components/Cards";
 import { Container, Row, Col } from "react-bootstrap";
 import { useState, useEffect } from "react";
 import axios from "axios";
+import DateBuilder from "./components/DateBuilder";
 
 const api = {
   id: "524901",
@@ -38,12 +39,15 @@ function App() {
               onSubmitFormHandler={onSubmitFormHandler}
             />
             {cityDetails && (
-              <ul>
-                <li>Country: {cityDetails.sys.country}</li>
-                <li>Name: {cityDetails.name}</li>
-                <li>Temperature: {cityDetails.main.temp}</li>
-                <li>Weather: {cityDetails.weather[0].description}</li>
-              </ul>
+              <>
+                <ul>
+                  <li>Country: {cityDetails.sys.country}</li>
+                  <li>Name: {cityDetails.name}</li>
+                  <li>Temperature: {cityDetails.main.temp}</li>
+                  <li>Weather: {cityDetails.weather[0].description}</li>
+                </ul>
+                <div>{<DateBuilder newDate={new Date()} />}</div>
+              </>
             )}
           </Cards>
         </Col>
