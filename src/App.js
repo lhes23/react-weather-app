@@ -27,19 +27,11 @@ function App() {
   }, [cityDetails]);
 
   return (
-    <Container>
+    <Container className="cold">
       <Row>
         <Col>
-          <Cards
-            title="Weather Forecast App"
-            temp={cityDetails && cityDetails.main.temp}
-          >
-            <Input
-              setCity={setCity}
-              onSubmitFormHandler={onSubmitFormHandler}
-            />
-            {cityDetails && <ResultBox cityDetails={cityDetails} />}
-          </Cards>
+          <Input setCity={setCity} onSubmitFormHandler={onSubmitFormHandler} />
+          {cityDetails && <ResultBox cityDetails={cityDetails} />}
         </Col>
       </Row>
     </Container>

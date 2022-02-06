@@ -4,6 +4,14 @@
   box-sizing: border-box;
 }
 
+.cold {
+  background: url("./assets/cold.jpg");
+}
+
+.warm {
+  background: url("./assets/warm.jpg");
+}
+
 .location-box .location {
   color: #fff;
   font-size: 40px;
