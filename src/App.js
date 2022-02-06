@@ -27,17 +27,24 @@ function App() {
   }, [cityDetails]);
 
   return (
-    <Container
-      fluid
-      className={cityDetails && cityDetails.main.temp >= 25 ? "warm" : "cold"}
-    >
-      <Row>
-        <Col>
-          <Input setCity={setCity} onSubmitFormHandler={onSubmitFormHandler} />
-          {cityDetails && <ResultBox cityDetails={cityDetails} />}
-        </Col>
-      </Row>
-    </Container>
+    <>
+      <Container
+        fluid
+        className={cityDetails && cityDetails.main.temp >= 25 ? "warm" : "cold"}
+      >
+        <div id="overlay">
+          <Row>
+            <Col>
+              <Input
+                setCity={setCity}
+                onSubmitFormHandler={onSubmitFormHandler}
+              />
+              {cityDetails && <ResultBox cityDetails={cityDetails} />}
+            </Col>
+          </Row>
+        </div>
+      </Container>
+    </>
   );
 }
 

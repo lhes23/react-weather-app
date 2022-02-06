@@ -1,5 +1,6 @@
 .container-fluid {
   height: 100vh;
+  padding: auto 0;
 }
 
 .cold {
@@ -10,4 +11,10 @@
 .warm {
   background: url("./assets/warm.jpg");
   background-size: cover;
+}
+
+#overlay {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
 }
