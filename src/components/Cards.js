@@ -2,7 +2,13 @@ import React from "react";
 import { Card } from "react-bootstrap";
 
 const Cards = (props) => {
+  let temp = props.temp;
+
   let background = "cold";
+  if (temp >= 25) {
+    background = "warm";
+  }
+
   return (
     <Card>
       <Card.Header as="h5">{props.title}</Card.Header>

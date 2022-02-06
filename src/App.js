@@ -29,7 +29,10 @@ function App() {
     <Container>
       <Row>
         <Col>
-          <Cards title="Weather Forecast App">
+          <Cards
+            title="Weather Forecast App"
+            temp={cityDetails && cityDetails.main.temp}
+          >
             <Input
               setCity={setCity}
               onSubmitFormHandler={onSubmitFormHandler}
