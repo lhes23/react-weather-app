@@ -27,7 +27,9 @@ function App() {
   }, [cityDetails]);
 
   return (
-    <Container className="cold">
+    <Container
+      className={cityDetails && cityDetails.main.temp >= 28 ? "warm" : "cold"}
+    >
       <Row>
         <Col>
           <Input setCity={setCity} onSubmitFormHandler={onSubmitFormHandler} />
