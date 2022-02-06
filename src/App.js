@@ -17,9 +17,12 @@ function App() {
 
   const onSubmitFormHandler = (e) => {
     e.preventDefault();
-    fetch(`${api.base}/weather?q=${city}&units=metric&APPID=${api.key}`)
-      .then((response) => response.json())
-      .then((result) => setCityDetails(result));
+    // fetch(`${api.base}/weather?q=${city}&units=metric&APPID=${api.key}`)
+    //   .then((response) => response.json())
+    //   .then((result) => setCityDetails(result));
+    axios
+      .get(`${api.base}/weather?q=${city}&units=metric&APPID=${api.key}`)
+      .then((res) => setCityDetails(res.data));
   };
 
   useEffect(() => {
